@@ -1,0 +1,130 @@
+{
+  "status": "OK",
+  "stage": "Chain B - Stage 2",
+  "input_files": ["chain_b_stage1_output.json", "synthetic_candidate_cv(2).md"],
+  "synthetic_data_only": true,
+  "matches": [
+    {
+      "requirement_id": "REQ-001",
+      "requirement_text": "University degree in a relevant field.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "**BSc, Computer Science** — Westbridge University (fictional), 2015"
+      ],
+      "assessment_note": "Relevant computer science degree explicitly listed.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-002",
+      "requirement_text": "Experience in business analysis, process analysis, and process modeling.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Modeled as-is and to-be processes using BPMN; wrote user stories, use cases, and acceptance criteria for two Scrum teams.",
+        "Senior Business Analyst with 10 years of fictional experience in financial services, telecommunications, and cloud software."
+      ],
+      "assessment_note": "Business analysis role and process modeling evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-003",
+      "requirement_text": "Knowledge and hands-on experience in SQL and data analysis.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Used SQL queries to validate data flows and prepare operational reports.",
+        "Analyzed data quality issues using SQL and supported remediation testing."
+      ],
+      "assessment_note": "Hands-on SQL and data analysis evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-004",
+      "requirement_text": "Proficiency in functional analysis, requirements analysis, and documentation.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Led requirements workshops for a cloud-based operations platform and documented functional and non-functional requirements.",
+        "Produced functional specifications, process diagrams, and UAT plans with business and development teams."
+      ],
+      "assessment_note": "Functional and requirements documentation evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-005",
+      "requirement_text": "Ability to prepare user stories, use cases, and flow diagrams.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Modeled as-is and to-be processes using BPMN; wrote user stories, use cases, and acceptance criteria for two Scrum teams.",
+        "Produced functional specifications, process diagrams, and UAT plans with business and development teams."
+      ],
+      "assessment_note": "User stories, use cases, and process diagrams evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-006",
+      "requirement_text": "Knowledge of software development lifecycle and Agile methodologies.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "- Delivery: Agile/Scrum, SDLC, backlog refinement, user stories, acceptance criteria, UAT",
+        "Modeled as-is and to-be processes using BPMN; wrote user stories, use cases, and acceptance criteria for two Scrum teams."
+      ],
+      "assessment_note": "SDLC and Agile/Scrum explicitly listed, with Scrum team delivery evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-007",
+      "requirement_text": "Experience in system integrations and integration scenarios.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Analyzed REST API and web-service integration scenarios between the platform and partner systems, including field mappings and error handling."
+      ],
+      "assessment_note": "Integration scenarios and hands-on analysis evidenced.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-008",
+      "requirement_text": "Interest in artificial intelligence and current technology trends.",
+      "match_status": "PARTIALLY_MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "Interested in practical AI-assisted process improvement.",
+        "Participated in product backlog refinement and evaluated potential AI-assisted workflow improvements."
+      ],
+      "assessment_note": "AI interest evidenced, but broader current technology trends not explicitly documented.",
+      "user_confirmation": false
+    },
+    {
+      "requirement_id": "REQ-009",
+      "requirement_text": "Strong analytical thinking, problem-solving, and communication skills.",
+      "match_status": "MATCHED",
+      "evidence_status": "CV_DOCUMENTED",
+      "cv_evidence": [
+        "- Collaboration: stakeholder workshops, analytical problem-solving, cross-functional communication",
+        "Facilitated stakeholder meetings and communicated implementation trade-offs."
+      ],
+      "assessment_note": "Analytical problem-solving and communication documented, including stakeholder facilitation.",
+      "user_confirmation": false
+    }
+  ],
+  "validation": {
+    "requirements_total": 9,
+    "requirements_assessed": 9,
+    "matched": 8,
+    "partially_matched": 1,
+    "not_matched": 0,
+    "not_verifiable": 0,
+    "evidence_quotes_verified": 16,
+    "all_quotes_exact_substrings": true,
+    "unique_requirement_ids": true,
+    "user_confirmed_count": 0,
+    "warnings": [
+      "This is evidence coverage, not an ATS score or an employment decision.",
+      "CV_DOCUMENTED indicates a claim appears in a fictional CV, not that it was independently verified."
+    ]
+  }
+}
