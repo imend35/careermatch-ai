@@ -1,146 +1,85 @@
 # CareerMatch AI
 
-### Evidence-Based Job Application Assistant
+**Evidence-Based Job Application Assistant | Prompt Engineering Portfolio Project**
 
-CareerMatch AI is a prompt-engineering project that explores how structured prompt chaining can support job requirement extraction, CV matching, application content generation, and quality validation.
+CareerMatch AI demonstrates a four-stage prompt-chain design for analyzing job postings, matching candidate evidence, drafting application materials, and validating claims before human approval.
 
-The project emphasizes evidence-based reasoning, transparent evaluation, and human-in-the-loop approval.
+> **Demo scope:** The public repository uses fully synthetic candidate and job data. Its JSON outputs are illustrative fixtures, **not recorded LLM inference runs**. Static Python checks validate internal consistency, not semantic correctness or real ATS performance.
 
-## Project Overview
+## Quick Start
 
-Job applicants often need to analyze job descriptions, compare requirements against their qualifications, tailor application documents, and verify the accuracy of AI-generated content.
+Requires Python 3.10+; no API keys or third-party Python packages required for static validation.
 
-CareerMatch AI addresses these tasks through a four-stage prompt workflow designed to reduce unsupported claims and improve the traceability of application recommendations.
+```bash
+git clone https://github.com/imend35/careermatch-ai.git
+cd careermatch-ai
+python -m src.validate
+python -m unittest discover -s tests -v
+```
+
+To regenerate the illustrative demo fixtures:
+
+```bash
+python make_demo_outputs.py
+python -m src.validate
+```
 
 ## Four-Stage Prompt Chain
 
-| Stage | Component                     | Purpose                                                                           |
-| ----- | ----------------------------- | --------------------------------------------------------------------------------- |
-| 1     | Job Requirement Extractor     | Extracts and classifies job requirements and responsibilities                     |
-| 2     | CV & Skills Matcher           | Compares candidate qualifications with job requirements using documented evidence |
-| 3     | Application Content Generator | Drafts tailored professional summaries, CV improvements, and cover letters        |
-| 4     | Quality Validator             | Audits generated claims, checks consistency, and requires human approval          |
-
-## Key Features
-
-- Structured job requirement extraction
-- Evidence-based CV and skills matching
-- Explainable requirement alignment scoring
-- ATS-oriented content recommendations
-- Tailored cover letter drafting
-- Evidence traceability and gap identification
-- Independent quality validation
-- Human-in-the-loop approval workflow
-- Baseline versus prompt-chain evaluation
-
-## Workflow
+| Stage | Prompt                                | Output                                                          |
+| ----- | ------------------------------------- | --------------------------------------------------------------- |
+| 1     | `prompts/01_requirement_extractor.md` | Requirements and responsibilities with source evidence          |
+| 2     | `prompts/02_cv_matcher.md`            | CV-to-requirement evidence matrix and rubric alignment          |
+| 3     | `prompts/03_content_generator.md`     | Tailored summary, CV bullet suggestions, and cover letter draft |
+| 4     | `prompts/04_quality_validator.md`     | Claim audit, quality review, and human-approval gate            |
 
 ```text
-Job Description
-      |
-      v
-[1] Requirement Extraction
-      |
-      v
-Structured Requirements
-      |
-      +---- Candidate CV
-      |
-      v
-[2] CV & Skills Matching
-      |
-      v
-Evidence-Based Matching Matrix
-      |
-      v
-[3] Application Content Generation
-      |
-      v
-Application Drafts
-      |
-      v
-[4] Quality Validation
-      |
-      v
-Human Review & Approval
+Job description ──> [1] Requirements ──┐
+                                       ├──> [2] Evidence matching ──> [3] Drafts ──> [4] QA
+Synthetic CV ──────────────────────────┘                                      │
+                                                                     Human approval required
 ```
 
-## Project Structure
+## Repository Guide
 
-```text
-careermatch-ai/
-├── prompts/
-├── sample_data/
-├── outputs/
-├── evaluation/
-├── src/
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+| Location                             | Contents                                                   |
+| ------------------------------------ | ---------------------------------------------------------- |
+| `prompts/`                           | Four reusable prompt templates                             |
+| `sample_data/`                       | Synthetic CV (Markdown/JSON) and fictional job posting     |
+| `outputs/`                           | Four illustrative JSON artifacts                           |
+| `src/validate.py`                    | Deterministic fixture and evidence-reference checks        |
+| `tests/`                             | Positive and negative validation tests                     |
+| `evaluation/`                        | Evaluation criteria, A/B test status, and validation guide |
+| `docs/PROJECT_PRESENTATION.md`       | English project presentation                               |
+| `docs/FINAL_SUBMISSION_CHECKLIST.md` | Release and submission checklist                           |
 
-The folders will contain reusable prompt templates, synthetic candidate data, example outputs, evaluation reports, and validation scripts.
+## Validation
 
-## Evaluation Approach
+The static validator checks nine requirement IDs and seven responsibility IDs, literal evidence presence in the synthetic sources, match-matrix coverage, rubric-score arithmetic, claim-audit coverage, and blocked submission while approval is pending. Negative tests intentionally introduce errors to ensure they are detected.
 
-The project compares a single-prompt baseline with a four-stage prompt chain.
+These checks **do not** demonstrate that an LLM has correctly interpreted evidence, that the drafts are suitable for a real application, or that an external ATS would assign the displayed score.
 
-The evaluation focuses on four criteria:
+## Evaluation Status
 
-1. Correct extraction of job requirements
-2. Traceability of claims to supporting evidence
-3. Separation of CV-documented and user-confirmed information
-4. Quality validation and human approval safeguards
+- A retrospective review of an earlier **private** job-application exercise reported **3 of 4** predefined criteria met; evidence traceability was incomplete for some claims. That review was **not a controlled A/B test**.
+- The public synthetic fixture displays **100% internal rubric alignment** and an **illustrative 91/100 QA score**. Neither number is an official ATS score or an independently measured model result.
+- A controlled baseline-vs-chain experiment using identical inputs and timed LLM executions **has not yet been run**. See [`evaluation/AB_TEST_RESULTS.md`](evaluation/AB_TEST_RESULTS.md).
 
-Initial artifact reviews have identified strengths and remaining limitations. A fully controlled, timed comparison between both methods has not yet been completed.
+## Responsible AI and Privacy
 
-Any reported alignment score is an internal evidence-based metric, not an official ATS score or a prediction of hiring success.
+- No real applicant's CV or contact information is required for the public demo.
+- Do not invent qualifications or present user-confirmed details as documented CV evidence.
+- Keep source references auditable and flag unsupported claims.
+- External application submission is **not implemented** and requires explicit human approval in any future implementation.
 
-## Privacy and Responsible AI
+## Technology
 
-This public repository is intended to use synthetic candidate data.
-
-The workflow is designed to:
-
-- Avoid fabricating qualifications, achievements, and experience
-- Distinguish documented evidence from user-confirmed information
-- Identify unsupported or uncertain claims
-- Prevent automatic job application submission
-- Require explicit human approval before external use
-
-No real candidate's private CV or personal contact information should be committed to this repository.
-
-## Technology Stack
-
-- Prompt Engineering
-- Generative AI / Large Language Models
-- Python
-- JSON
-- CSV
-- Markdown
-- Git and GitHub
-
-## Current Status
-
-**In development**
-
-The four prompt stages have been designed and evaluated using a real job application scenario. Repository packaging, synthetic-data demonstrations, automated validation, and controlled A/B testing are being finalized.
-
-## Future Improvements
-
-- Automated prompt-chain orchestration
-- Expanded test datasets
-- Reproducible end-to-end evaluation
-- Additional job description formats
-- Enhanced evidence traceability
-- Optional user interface
+Prompt Engineering · Generative AI workflow design · Python · JSON · Markdown · Git/GitHub
 
 ## Author
 
-**Esila Nur Demirci**
-
-GitHub: [imend35](https://github.com/imend35)
+**Esila Nur Demirci** · [GitHub: imend35](https://github.com/imend35)
 
 ## Disclaimer
 
-CareerMatch AI is an educational prompt-engineering project. Generated content requires human verification and must not be treated as an official hiring assessment or ATS result.
+Educational demonstration only. No hiring predictions, official ATS scoring, or automatic application submissions.
