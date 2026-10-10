@@ -1,0 +1,105 @@
+{
+  "status": "PASS_WITH_NOTES",
+  "stage": "Chain B - Stage 4",
+  "audit_type": "Independent claim and consistency audit",
+  "synthetic_data_only": true,
+  "input_files": [
+    "sample_job_description(1).txt",
+    "synthetic_candidate_cv(2).md",
+    "chain_b_stage1_output.json",
+    "chain_b_stage2_output.json",
+    "chain_b_stage3_output.json"
+  ],
+  "checks": [
+    {
+      "check": "requirement_ids_consistent",
+      "passed": true,
+      "detail": "Stage 1/2 ID sets and uniqueness"
+    },
+    {
+      "check": "stage1_source_evidence",
+      "passed": true,
+      "detail": "Exact quotations present in job description"
+    },
+    {
+      "check": "stage2_cv_evidence",
+      "passed": true,
+      "detail": "Every Stage 2 quote present in CV"
+    },
+    {
+      "check": "stage3_cv_evidence",
+      "passed": true,
+      "detail": "Every Stage 3 traceability quote present in CV"
+    },
+    {
+      "check": "stage2_stage3_status_consistency",
+      "passed": true,
+      "detail": "Match statuses unchanged"
+    },
+    {
+      "check": "all_claims_cv_documented",
+      "passed": true,
+      "detail": "No user-confirmed evidence asserted"
+    },
+    {
+      "check": "human_approval_gate",
+      "passed": true,
+      "detail": "No approval or submission"
+    },
+    {
+      "check": "synthetic_fixture",
+      "passed": true,
+      "detail": "Demo only"
+    },
+    {
+      "check": "draft_sections_present",
+      "passed": true,
+      "detail": "Three drafts populated"
+    },
+    {
+      "check": "no_unsubstantiated_metrics",
+      "passed": true,
+      "detail": "No invented percentage achievements"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "LOW",
+      "claim": "10 years of experience",
+      "assessment": "Documented in synthetic CV summary; fictional, not independently verified.",
+      "disposition": "ALLOW_WITH_SYNTHETIC_LABEL"
+    },
+    {
+      "severity": "LOW",
+      "claim": "responsible AI-assisted workflows",
+      "assessment": "Responsible AI use appears in job posting; CV documents interest and evaluation of AI-assisted workflows, not independent responsible-AI delivery expertise. Draft frames it as interest, not an achievement.",
+      "disposition": "ALLOW_AS_INTEREST_ONLY"
+    },
+    {
+      "severity": "INFO",
+      "claim": "Current technology trends",
+      "assessment": "Not independently evidenced in CV; correctly omitted from drafts.",
+      "disposition": "OMIT"
+    }
+  ],
+  "counts": {
+    "requirements": 9,
+    "matched": 8,
+    "partially_matched": 1,
+    "traceability_quotes": 16,
+    "checks_passed": 10,
+    "checks_total": 10
+  },
+  "human_approval": {
+    "status": "PENDING_HUMAN_APPROVAL",
+    "approved": false,
+    "approved_by": null,
+    "approved_at": null,
+    "submission_allowed": false,
+    "submission_performed": false
+  },
+  "limitations": [
+    "Exact quotation checks establish textual traceability, not truth of synthetic claims.",
+    "Qualitative claim audit is based on provided fixtures; no real employer, ATS or candidate validation."
+  ]
+}
