@@ -1,0 +1,2 @@
+run_id,run_date,model,model_version,settings,start_time_local,end_time_local,manual_correction_minutes,K1,K2,K3,K4,notes
+Baseline_A_001,2026-10-10,GPT-6,not exposed,not exposed,not captured,not captured,not measured,PASS,PASS,PASS,PASS,Synthetic input; K checks defined in report; timestamps and corrections must be entered by operator
