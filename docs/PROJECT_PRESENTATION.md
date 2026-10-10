@@ -180,7 +180,95 @@ The available data does not establish that Chain B is more accurate, faster, or 
 
 Additional controlled experiments would be necessary to assess those claims.
 
-## 8. Python Validation and Unit Testing
+## 8. Supplementary Multimodal Demonstration — Text + CSV
+
+### Objective
+
+Demonstrate how CareerMatch AI evaluates structured job requirements from a CSV table against evidence from an unstructured synthetic CV.
+
+This supplementary execution extends the documented evidence for the course's two-input-type requirement.
+
+### Input Sources
+
+| Input                    | Format        | Purpose                                     |
+| ------------------------ | ------------- | ------------------------------------------- |
+| Synthetic Candidate CV   | Markdown text | Candidate qualification evidence            |
+| Requirements Table       | CSV           | Structured requirement IDs and descriptions |
+| Original Job Description | Plain text    | Requirement source verification             |
+
+### Execution
+
+**Model:** GPT-6  
+**Date:** October 10, 2026  
+**Workflow Component:** Chain B — Stage 2  
+**Test Type:** Supplementary LLM execution
+
+### Results
+
+| Metric                     |  Result |
+| -------------------------- | ------: |
+| CSV requirements evaluated |       9 |
+| Fully matched              |       7 |
+| Partially matched          |       2 |
+| Not verifiable             |       0 |
+| Not matched                |       0 |
+| Evidence alignment         |  88.89% |
+| Human approval             | Pending |
+
+**Alignment calculation:**
+
+(7 × 1.0 + 2 × 0.5) / 9 × 100 = 88.89%
+
+### Comparison with Original Chain B
+
+| Metric             | Original Chain B | Supplementary Stage 2 |
+| ------------------ | ---------------: | --------------------: |
+| Fully matched      |                8 |                     7 |
+| Partially matched  |                1 |                     2 |
+| Evidence alignment |           94.44% |                88.89% |
+
+The difference is 5.55 percentage points.
+
+The supplementary execution was not a controlled experiment comparing input formats. The observed difference cannot be attributed solely to CSV input or prompt design.
+
+### Evidence Review
+
+**REQ-005:** The model classified user stories, use cases, and flow diagrams as partially matched. The synthetic CV documents BPMN process modeling and process diagrams, making the classification conservative and subject to review.
+
+**REQ-008:** The model classified AI interest and current technology trends as partially matched. The CV documents an AI workflow prototype, but broader technology-trend awareness was not independently established.
+
+### Deterministic Validation
+
+The supplementary consistency validator reported:
+
+- Status: PASS
+- Input types: text and CSV table
+- CSV rows: 9
+- Stage 1 requirements: 9
+- Issues: 0
+
+### Human Oversight
+
+The recorded output retained:
+
+`PENDING_HUMAN_APPROVAL`
+
+No external application submission was performed.
+
+### Limitations
+
+This demonstration records one supplementary Stage 2 LLM execution. It does not establish a complete new four-stage multimodal run, production reliability, or generalization to real recruitment outcomes.
+
+### Supporting Artifacts
+
+- `tests/multimodal/STAGE2_TEXT_CSV_PROMPT.md`
+- `tests/multimodal/STAGE2_TEXT_CSV_OUTPUT.json`
+- `tests/multimodal/STAGE2_TEXT_CSV_TEST_REPORT.md`
+- `tests/multimodal/MULTIMODAL_TEST_REPORT.md`
+- `docs/SELF_EVALUATION.md`
+- `docs/WEEKLY_USE_CASE.md`
+
+## 9. Python Validation and Unit Testing
 
 The repository includes a deterministic Python validator and a unit-test suite.
 
@@ -219,7 +307,7 @@ This is the runtime of the Python unit tests, not the LLM evaluation.
 
 The static tests validate fixture consistency and selected safeguards. They do not independently measure semantic LLM accuracy.
 
-## 9. Responsible AI and Privacy
+## 10. Responsible AI and Privacy
 
 CareerMatch AI applies several responsible AI principles.
 
@@ -235,7 +323,7 @@ CareerMatch AI applies several responsible AI principles.
 
 **Metric Integrity:** Internal alignment percentages are not presented as official ATS results.
 
-## 10. Experimental Limitations
+## 11. Experimental Limitations
 
 The current evaluation has important limitations:
 
@@ -249,7 +337,7 @@ The current evaluation has important limitations:
 
 The findings therefore support a descriptive comparison of workflow architectures.
 
-## 11. Lessons Learned
+## 12. Lessons Learned
 
 This project reinforced the importance of:
 
@@ -261,7 +349,7 @@ This project reinforced the importance of:
 - Documenting experimental limitations.
 - Keeping humans responsible for final application decisions.
 
-## 12. Future Improvements
+## 13. Future Improvements
 
 Potential next steps include:
 
@@ -276,7 +364,7 @@ Potential next steps include:
 
 These are planned improvements, not existing implemented features.
 
-## 13. Conclusion
+## 14. Conclusion
 
 CareerMatch AI demonstrates an evidence-based approach to AI-assisted job application preparation.
 

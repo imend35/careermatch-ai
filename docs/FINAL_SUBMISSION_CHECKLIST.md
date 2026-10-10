@@ -1,91 +1,132 @@
 # CareerMatch AI — Final Submission Checklist
 
-**Review date:** October 10, 2026  
-**Project:** Evidence-Based Job Application Assistant  
-**Status:** Final verification in progress
+**Project:** CareerMatch AI — Evidence-Based Job Application Assistant  
+**Course:** Prompt Engineering 2.0 (Multimodal)  
+**Version:** 1.1  
+**Review Date:** October 10, 2026  
+**Technical Status:** PASS  
+**Submission Status:** Pending final administrative confirmation
 
 ## 1. Repository and Documentation
 
-- [x] README documents the project architecture, setup, limitations, and evaluation.
-- [x] Four updated Chain B prompts are available in `prompts/`.
-- [x] Synthetic demonstration data and illustrative JSON fixtures are documented.
-- [x] Static Python validator and unit tests are present.
-- [x] Baseline A evaluation is recorded.
-- [x] Chain B stage outputs and audit artifacts are recorded.
-- [x] A/B comparison report and CSV log are available.
-- [ ] Project presentation reflects the latest A/B findings.
-- [ ] README placeholder labels are reconciled with the actual repository structure.
+- [x] README documents project architecture, evaluation, and limitations.
+- [x] Four Chain B prompts are documented.
+- [x] Synthetic job and candidate fixtures are available.
+- [x] Baseline A and Chain B evaluation artifacts are recorded.
+- [x] A/B comparison report is available.
+- [x] Three reusable prompt library cards are documented.
+- [x] Self-evaluation has been updated.
+- [x] Weekly recurring use case is documented.
+- [x] Supplementary Stage 2 text-and-CSV output is recorded.
+- [x] Supplementary multimodal test report is documented.
+- [ ] README paths and references receive a final consistency review.
+- [ ] Final presentation receives the supplementary test update.
 
-## 2. Local Verification
+## 2. Final Local Verification
 
-Run from the repository root:
+**Execution Date:** October 10, 2026
 
-```powershell
-python -m src.validate
-python -m unittest discover -s tests -v
-git status --short
-```
+| Validation                          | Result   |
+| ----------------------------------- | -------- |
+| Static synthetic fixture validation | PASS     |
+| Requirements checked                | 9        |
+| Responsibilities checked            | 7        |
+| Matching rows checked               | 9        |
+| Claims checked                      | 13       |
+| Python unit tests                   | 5/5 PASS |
+| Deterministic text/CSV consistency  | PASS     |
+| CSV requirement rows                | 9        |
+| Validation issues                   | 0        |
+| Git working tree                    | Clean    |
 
-Confirm:
+All validation commands were executed twice with successful results.
 
-- [ ] Static validator reports `passed: true`.
-- [ ] All five existing unit tests pass.
-- [ ] Working tree is clean after committing.
-- [ ] No real candidate CVs, secrets, credentials, or private application data are committed.
+Recorded Python unit-test runtimes were 0.081 and 0.072 seconds. These durations do not represent LLM inference latency.
 
-## 3. Prompt Chain Evaluation
+## 3. Responsible AI Safeguards
 
-- [x] Stage 1: Requirement extraction.
-- [x] Stage 2: Evidence-based CV matching.
-- [x] Stage 3: Application drafting.
-- [x] Stage 4: Claim auditing and human approval gate.
-- [x] Baseline A: Single-shot evaluation.
-- [x] Chain B: Multi-stage evaluation.
-- [x] K1–K4 comparison documented.
-- [x] Evidence-alignment calculation documented.
-- [x] Experimental limitations documented.
-
-## 4. Recorded A/B Findings
-
-| Metric                 | Baseline A   | Chain B      |
-| ---------------------- | ------------ | ------------ |
-| Requirements           | 9/9          | 9/9          |
-| Responsibilities       | 7/7          | 7/7          |
-| Full matches           | 8            | 8            |
-| Partial matches        | 1            | 1            |
-| Evidence alignment     | 94.44%       | 94.44%       |
-| K1–K4                  | 4/4          | 4/4          |
-| Execution time         | Not captured | Not captured |
-| Manual correction time | Not measured | Not measured |
-
-The experiment demonstrates equivalent observed matching results on one synthetic fixture.
-
-Chain B offers a modular, inspectable workflow but no demonstrated accuracy or speed advantage.
-
-## 5. Responsible AI and Claim Accuracy
-
-- [x] Synthetic public data only.
-- [x] Evidence provenance recorded.
-- [x] Unsupported claims are prohibited.
+- [x] Synthetic demonstration data used in the recorded tests.
+- [x] CV evidence quotations required.
+- [x] Missing job evidence detection tested.
+- [x] Fabricated CV evidence rejection tested.
+- [x] Alignment score mismatch detection tested.
+- [x] Unauthorized submission rejection tested.
 - [x] Human approval remains pending.
-- [x] Automatic application submission is not implemented.
-- [x] Evidence alignment is not represented as an official ATS score.
-- [x] Static fixture checks are distinguished from LLM evaluation.
-- [x] Limitations of the partially controlled comparison are disclosed.
+- [x] No automatic application submission implemented.
+- [x] Internal alignment is distinguished from official ATS scoring.
+- [ ] Final repository-wide privacy and secret scan confirmed.
 
-## 6. Course Submission Requirements
+## 4. Original A/B Evaluation
 
-- [ ] Official assignment rubric reviewed.
-- [ ] Required prompt library cards confirmed, if applicable.
-- [ ] Required input modalities demonstrated, if applicable.
-- [ ] Required self-evaluation questions answered.
-- [ ] Required submission format verified.
-- [ ] Submission deadline confirmed.
+| Metric             |   Baseline A |      Chain B |
+| ------------------ | -----------: | -----------: |
+| Requirements       |            9 |            9 |
+| Responsibilities   |            7 |            7 |
+| Fully matched      |            8 |            8 |
+| Partially matched  |            1 |            1 |
+| Evidence alignment |       94.44% |       94.44% |
+| K1–K4 checks       |          4/4 |          4/4 |
+| LLM execution time | Not measured | Not measured |
 
-## Final Decision
+The original comparison is partially controlled and does not establish an accuracy or speed advantage.
 
-**Status: PENDING FINAL VERIFICATION**
+## 5. Supplementary Text + CSV Evaluation
 
-The documented project and A/B experiment are available in the repository. Final submission readiness depends on successful local tests and confirmation against the instructor's official rubric.
+**Model:** GPT-6  
+**Test:** Stage 2 — Evidence-Based CV Matching
+
+| Metric                 | Recorded Result        |
+| ---------------------- | ---------------------- |
+| Input representations  | Text + CSV table       |
+| Requirements evaluated | 9                      |
+| Fully matched          | 7                      |
+| Partially matched      | 2                      |
+| Weighted points        | 8 / 9                  |
+| Evidence alignment     | 88.89%                 |
+| Human approval         | PENDING_HUMAN_APPROVAL |
+| Application submission | Not performed          |
+
+The supplementary evaluation was a separate LLM execution and must not be treated as a controlled comparison against the original Chain B result.
+
+The model-reported validation passed, with review notes concerning REQ-005 and REQ-008.
+
+## 6. Course Evaluation Criteria
+
+| Criterion                      | Status                       |
+| ------------------------------ | ---------------------------- |
+| Clear task decomposition       | PASS                         |
+| Two input representations      | PASS — Supplementary Stage 2 |
+| Evidence traceability          | PASS — Recorded scope        |
+| Predefined evaluation criteria | PARTIAL                      |
+| Human approval checkpoint      | PASS                         |
+| Three reusable prompt cards    | PASS                         |
+| Weekly recurring task          | Documented use case          |
+
+The weekly workflow is an intended recurring process, not a deployed automated schedule.
+
+## 7. Final Submission Requirements
+
+- [x] Four-stage prompt chain documented.
+- [x] Supplementary text-and-table execution recorded.
+- [x] Evidence-based outputs documented.
+- [x] Human approval checkpoint demonstrated.
+- [x] Three reusable prompt library cards created.
+- [x] Six self-evaluation questions answered.
+- [x] Weekly use case documented.
+- [x] Final local technical tests passed.
+- [ ] Official submission format confirmed.
+- [ ] Official deadline confirmed.
+- [ ] Final presentation and README references reviewed.
+- [ ] Final privacy and repository scan completed.
+
+## 8. Final Decision
+
+**Technical Validation: PASSED**
+
+**Submission Readiness: PENDING FINAL ADMINISTRATIVE AND DOCUMENTATION REVIEW**
+
+The recorded technical checks passed, and the repository contains the core workflow, evaluation, and multimodal demonstration artifacts.
+
+The project does not claim production deployment, real ATS assessment, automatic job submission, or proven performance superiority over the single-shot baseline.
 
 **Repository:** https://github.com/imend35/careermatch-ai
