@@ -1,0 +1,1 @@
+"""CareerMatch AI validation helpers."""
