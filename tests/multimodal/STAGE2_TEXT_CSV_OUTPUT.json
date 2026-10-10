@@ -1,0 +1,231 @@
+{
+"status": "PASS",
+"input*verification": {
+"test_name": "Chain B — Stage 2: Text + CSV Input Test",
+"project": "CareerMatch AI",
+"version": "1.0",
+"execution_date": "2026-10-10",
+"model": "GPT-6",
+"test_type": "Supplementary text-and-table LLM demonstration",
+"inputs_used": [
+{
+"file": "sample_data/synthetic_candidate_cv.md",
+"format": "unstructured_text",
+"purpose": "Sole source of candidate qualifications",
+"verified": true
+},
+{
+"file": "tests/multimodal/requirements_input.csv",
+"format": "structured_csv_table",
+"purpose": "Authoritative requirement IDs and texts",
+"verified": true,
+"row_count": 9
+},
+{
+"file": "sample_data/sample_job_description.txt",
+"format": "unstructured_text",
+"purpose": "Original requirement verification",
+"verified": true
+}
+],
+"csv_job_description_consistency": {
+"status": "PASS",
+"requirements_checked": 9,
+"exact_text_matches": 9,
+"mismatches": [],
+"duplicate_requirement_ids": [],
+"missing_requirement_ids": []
+},
+"candidate_data_type": "FULLY_SYNTHETIC",
+"real_ats_assessment": false,
+"original_ab_evaluation_modified": false
+},
+"matching_matrix": [
+{
+"requirement_id": "REQ-001",
+"requirement_text": "University degree in a relevant field.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Education",
+"exact_quotation": "**BSc, Computer Science** — Westbridge University (fictional), 2015"
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-002",
+"requirement_text": "Experience in business analysis, process analysis, and process modeling.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Professional Experience — Northstar Cloud Systems",
+"exact_quotation": "- Modeled as-is and to-be processes using BPMN; wrote user stories, use cases, and acceptance criteria for two Scrum teams."
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-003",
+"requirement_text": "Knowledge and hands-on experience in SQL and data analysis.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Professional Experience — Meridian Financial Solutions",
+"exact_quotation": "- Analyzed data quality issues using SQL and supported remediation testing."
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-004",
+"requirement_text": "Proficiency in functional analysis, requirements analysis, and documentation.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Professional Experience — Northstar Cloud Systems",
+"exact_quotation": "- Led requirements workshops for a cloud-based operations platform and documented functional and non-functional requirements."
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-005",
+"requirement_text": "Ability to prepare user stories, use cases, and flow diagrams.",
+"cv_only_status": "PARTIALLY_MATCHED",
+"confirmed_status": "PARTIALLY_MATCHED",
+"evidence_strength": "MODERATE",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Professional Experience — Meridian Financial Solutions",
+"exact_quotation": "- Produced functional specifications, process diagrams, and UAT plans with business and development teams."
+},
+"gap": "User stories and use cases are explicitly documented elsewhere in the CV. Process diagrams are documented, but the exact flow-diagram deliverable is not independently identified.",
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-006",
+"requirement_text": "Knowledge of software development lifecycle and Agile methodologies.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Core Skills — Delivery",
+"exact_quotation": "- Delivery: Agile/Scrum, SDLC, backlog refinement, user stories, acceptance criteria, UAT"
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-007",
+"requirement_text": "Experience in system integrations and integration scenarios.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "STRONG",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Professional Experience — Northstar Cloud Systems",
+"exact_quotation": "- Analyzed REST API and web-service integration scenarios between the platform and partner systems, including field mappings and error handling."
+},
+"gap": null,
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-008",
+"requirement_text": "Interest in artificial intelligence and current technology trends.",
+"cv_only_status": "PARTIALLY_MATCHED",
+"confirmed_status": "PARTIALLY_MATCHED",
+"evidence_strength": "MODERATE",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Training and Projects",
+"exact_quotation": "- **AI Workflow Prototype (fictional, 2025):** Designed a small demonstration workflow to classify incoming service requests and route them for human review."
+},
+"gap": "Interest in AI is supported by a documented project. Broader awareness of current technology trends is not independently demonstrated.",
+"human_review_required": true
+},
+{
+"requirement_id": "REQ-009",
+"requirement_text": "Strong analytical thinking, problem-solving, and communication skills.",
+"cv_only_status": "MATCHED",
+"confirmed_status": "MATCHED",
+"evidence_strength": "MODERATE",
+"evidence": {
+"source_type": "CV_DOCUMENTED",
+"cv_section": "Core Skills — Collaboration",
+"exact_quotation": "- Collaboration: stakeholder workshops, analytical problem-solving, cross-functional communication"
+},
+"gap": "All three competencies are documented, but their strength has not been independently assessed.",
+"human_review_required": true
+}
+],
+"scoring": {
+"requirement_count": 9,
+"matched_count": 7,
+"partially_matched_count": 2,
+"not_verifiable_count": 0,
+"not_matched_count": 0,
+"weights": {
+"MATCHED": 1.0,
+"PARTIALLY_MATCHED": 0.5,
+"NOT_VERIFIABLE": 0.0,
+"NOT_MATCHED": 0.0
+},
+"weighted_points": 8.0,
+"maximum_points": 9.0,
+"calculation": "((7 * 1.0) + (2 \_ 0.5)) / 9 \* 100",
+"cv_only_alignment_percent": 88.89,
+"confirmed_alignment_percent": 88.89,
+"official_ats_score": null,
+"score_interpretation": "Demonstration-only evidence alignment; not an official ATS score."
+},
+"validation": {
+"status": "PASS",
+"checks": {
+"all_nine_csv_requirements_evaluated": true,
+"each_requirement_evaluated_once": true,
+"text_input_used": true,
+"csv_table_input_used": true,
+"csv_verified_against_job_description": true,
+"exact_cv_quotations_provided": true,
+"evidence_source_types_distinguished": true,
+"unsupported_user_confirmations_assumed": false,
+"alignment_arithmetic_correct": true,
+"official_ats_score_claimed": false,
+"candidate_qualifications_fabricated": false,
+"external_submission_performed": false,
+"original_ab_artifacts_modified": false
+},
+"evidence_policy": {
+"CV_DOCUMENTED": "Qualifications explicitly supported by the synthetic CV.",
+"USER_CONFIRMED": "No separate user confirmation supplied.",
+"NOT_VERIFIABLE": "Used for unsupported or insufficiently evidenced claims."
+},
+"limitations": [
+"The candidate CV and job posting are fictional demonstration fixtures.",
+"No external verification of education, employment, or achievements was performed.",
+"Flow-diagram experience is supported indirectly by process-diagram evidence.",
+"General technology-trend awareness is not independently established.",
+"Soft-skill strength cannot be independently measured from CV text alone.",
+"Confirmed alignment is identical to CV-only alignment because no additional user confirmations were supplied.",
+"This test does not establish production reliability or generalize to real recruitment outcomes."
+],
+"acceptance_criteria_met": true,
+"evaluation_scope": "Single supplementary LLM execution using text and CSV inputs."
+},
+"human_approval": {
+"status": "PENDING_HUMAN_APPROVAL",
+"approved": false,
+"submission_allowed": false,
+"submission_performed": false
+}
+}
