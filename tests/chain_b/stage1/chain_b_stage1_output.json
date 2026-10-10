@@ -1,0 +1,155 @@
+{
+  "status": "OK",
+  "job_metadata": {
+    "job_title": "Senior Business Analyst",
+    "employer": "Example Enterprise Solutions",
+    "recruiter": null,
+    "location": "Istanbul, Türkiye",
+    "work_model": "Hybrid",
+    "source_url": null,
+    "extraction_date": "2026-10-10"
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "text": "University degree in a relevant field.",
+      "category": "education",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 1,
+      "source_evidence": "University degree in a relevant field."
+    },
+    {
+      "id": "REQ-002",
+      "text": "Experience in business analysis, process analysis, and process modeling.",
+      "category": "business_analysis",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 2,
+      "source_evidence": "Experience in business analysis, process analysis, and process modeling."
+    },
+    {
+      "id": "REQ-003",
+      "text": "Knowledge and hands-on experience in SQL and data analysis.",
+      "category": "technical",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 3,
+      "source_evidence": "Knowledge and hands-on experience in SQL and data analysis."
+    },
+    {
+      "id": "REQ-004",
+      "text": "Proficiency in functional analysis, requirements analysis, and documentation.",
+      "category": "business_analysis",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 4,
+      "source_evidence": "Proficiency in functional analysis, requirements analysis, and documentation."
+    },
+    {
+      "id": "REQ-005",
+      "text": "Ability to prepare user stories, use cases, and flow diagrams.",
+      "category": "business_analysis",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 5,
+      "source_evidence": "Ability to prepare user stories, use cases, and flow diagrams."
+    },
+    {
+      "id": "REQ-006",
+      "text": "Knowledge of software development lifecycle and Agile methodologies.",
+      "category": "methodology",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 6,
+      "source_evidence": "Knowledge of software development lifecycle and Agile methodologies."
+    },
+    {
+      "id": "REQ-007",
+      "text": "Experience in system integrations and integration scenarios.",
+      "category": "technical",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 7,
+      "source_evidence": "Experience in system integrations and integration scenarios."
+    },
+    {
+      "id": "REQ-008",
+      "text": "Interest in artificial intelligence and current technology trends.",
+      "category": "other",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 8,
+      "source_evidence": "Interest in artificial intelligence and current technology trends."
+    },
+    {
+      "id": "REQ-009",
+      "text": "Strong analytical thinking, problem-solving, and communication skills.",
+      "category": "soft_skills",
+      "priority": "UNSPECIFIED",
+      "source_section": "Requirements",
+      "source_item_index": 9,
+      "source_evidence": "Strong analytical thinking, problem-solving, and communication skills."
+    }
+  ],
+  "responsibilities": [
+    {
+      "id": "RESP-001",
+      "text": "Analyze current and target business processes and define functional and technical requirements.",
+      "source_section": "Responsibilities",
+      "source_item_index": 1,
+      "source_evidence": "Analyze current and target business processes and define functional and technical requirements."
+    },
+    {
+      "id": "RESP-002",
+      "text": "Recommend product and process improvements, including responsible use of AI tools.",
+      "source_section": "Responsibilities",
+      "source_item_index": 2,
+      "source_evidence": "Recommend product and process improvements, including responsible use of AI tools."
+    },
+    {
+      "id": "RESP-003",
+      "text": "Prepare clear analysis and design documentation for development teams.",
+      "source_section": "Responsibilities",
+      "source_item_index": 3,
+      "source_evidence": "Prepare clear analysis and design documentation for development teams."
+    },
+    {
+      "id": "RESP-004",
+      "text": "Support functional testing, coordinate UAT, and report results.",
+      "source_section": "Responsibilities",
+      "source_item_index": 4,
+      "source_evidence": "Support functional testing, coordinate UAT, and report results."
+    },
+    {
+      "id": "RESP-005",
+      "text": "Perform SQL and data analysis to support business reporting.",
+      "source_section": "Responsibilities",
+      "source_item_index": 5,
+      "source_evidence": "Perform SQL and data analysis to support business reporting."
+    },
+    {
+      "id": "RESP-006",
+      "text": "Follow applicable privacy, information-security, workplace-safety, and quality requirements.",
+      "source_section": "Responsibilities",
+      "source_item_index": 6,
+      "source_evidence": "Follow applicable privacy, information-security, workplace-safety, and quality requirements."
+    },
+    {
+      "id": "RESP-007",
+      "text": "Monitor relevant AI tools and identify potential efficiency improvements.",
+      "source_section": "Responsibilities",
+      "source_item_index": 7,
+      "source_evidence": "Monitor relevant AI tools and identify potential efficiency improvements."
+    }
+  ],
+  "validation": {
+    "requirements_count": 9,
+    "responsibilities_count": 7,
+    "unverifiable_fields": ["recruiter", "source_url"],
+    "warnings": [
+      "Synthetic demonstration job posting; not a live vacancy.",
+      "All requirements have UNSPECIFIED priority because no explicit mandatory or preferred wording is provided."
+    ]
+  }
+}
