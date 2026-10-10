@@ -276,53 +276,107 @@ The results therefore support a descriptive architectural comparison rather than
 
 ---
 
+## Supplementary Text + CSV Input Demonstration
+
+CareerMatch AI includes a supplementary GPT-6 Stage 2 evaluation demonstrating evidence-based CV matching with two input representations:
+
+- **Unstructured text:** Synthetic candidate CV in Markdown.
+- **Structured table:** Nine job requirements in CSV format.
+
+The original job description is also used to verify requirement consistency.
+
+### Recorded Results
+
+| Metric                 |                 Result |
+| ---------------------- | ---------------------: |
+| Requirements evaluated |                      9 |
+| Fully matched          |                      7 |
+| Partially matched      |                      2 |
+| Evidence alignment     |                 88.89% |
+| Human approval         | PENDING_HUMAN_APPROVAL |
+
+The supplementary result is separate from the original Baseline A versus Chain B comparison, in which both approaches achieved 94.44% evidence alignment.
+
+The difference does not establish an advantage or disadvantage for either input format.
+
+### Validation
+
+The supplementary deterministic text/CSV consistency test passed:
+
+```bash
+python tests/multimodal/validate_multimodal.py
+```
+
+The latest recorded local verification also passed all five Python unit tests and the static fixture validator.
+
+### Supporting Files
+
+- `tests/multimodal/requirements_input.csv`
+- `tests/multimodal/validate_multimodal.py`
+- `tests/multimodal/MULTIMODAL_TEST_REPORT.md`
+- `tests/multimodal/STAGE2_TEXT_CSV_PROMPT.md`
+- `tests/multimodal/STAGE2_TEXT_CSV_OUTPUT.json`
+- `tests/multimodal/STAGE2_TEXT_CSV_TEST_REPORT.md`
+
+**Scope:** One supplementary Stage 2 LLM execution. This is not a new end-to-end four-stage multimodal evaluation or an official ATS assessment.
+
+### Weekly Use Case and Prompt Library
+
+The intended recurring task is a weekly job advertisement and CV alignment review.
+
+See:
+
+- `docs/WEEKLY_USE_CASE.md`
+- `docs/PROMPT_LIBRARY_CARDS.md`
+- `docs/SELF_EVALUATION.md`
+
+The weekly use case is documented but has not been deployed as an automated recurring service.
+
+---
+
 ## 4. Repository Structure
 
 The repository separates reusable prompts, synthetic demonstration data, static validation utilities, and recorded evaluation artifacts.
 
-```text
 careermatch-ai/
-|
-|-- README.md
-|
-|-- prompts/
-|   |-- 01_requirement_extractor.md
-|   |-- 02_cv_matcher.md
-|   |-- 03_application_drafter.md
-|   |-- 04_independent_auditor.md
-|   |-- [legacy prompt templates]
-|
-|-- sample_data/
-|   |-- [synthetic job and candidate fixtures]
-|
-|-- outputs/
-|   |-- [illustrative demo JSON outputs]
-|
-|-- src/
-|   |-- validate.py
-|
-|-- tests/
-|   |-- [static validation tests]
-|   |
-|   |-- chain_b/
-|   |   |-- stage1/
-|   |   |-- stage2/
-|   |   |-- stage3/
-|   |   |-- stage4/
-|   |
-|   |-- ab_comparison/
-|       |-- AB_COMPARISON_REPORT.md
-|       |-- AB_COMPARISON_RUN_LOG.csv
-|
-|-- evaluation/
-|   |-- AB_TEST_RESULTS.md
-|
-|-- docs/
-|   |-- PROJECT_PRESENTATION.md
-|   |-- FINAL_SUBMISSION_CHECKLIST.md
-|
-|-- make_demo_outputs.py
-```
+├── README.md
+├── prompts/
+│ ├── 01_requirement_extractor.md
+│ ├── 02_cv_matcher.md
+│ ├── 03_application_drafter.md
+│ └── 04_independent_auditor.md
+├── sample_data/
+│ └── [synthetic job and candidate fixtures]
+├── outputs/
+│ └── [illustrative JSON fixtures]
+├── src/
+│ └── validate.py
+├── tests/
+│ ├── test_validation.py
+│ ├── chain_b/
+│ │ ├── stage1/
+│ │ ├── stage2/
+│ │ ├── stage3/
+│ │ └── stage4/
+│ ├── ab_comparison/
+│ │ ├── AB_COMPARISON_REPORT.md
+│ │ └── AB_COMPARISON_RUN_LOG.csv
+│ └── multimodal/
+│ ├── requirements_input.csv
+│ ├── validate_multimodal.py
+│ ├── MULTIMODAL_TEST_REPORT.md
+│ ├── STAGE2_TEXT_CSV_PROMPT.md
+│ ├── STAGE2_TEXT_CSV_OUTPUT.json
+│ └── STAGE2_TEXT_CSV_TEST_REPORT.md
+├── docs/
+│ ├── PROJECT_PRESENTATION.md
+│ ├── FINAL_SUBMISSION_CHECKLIST.md
+│ ├── SELF_EVALUATION.md
+│ ├── PROMPT_LIBRARY_CARDS.md
+│ └── WEEKLY_USE_CASE.md
+└── make_demo_outputs.py
+
+````
 
 The `outputs/` directory contains illustrative static demo fixtures. These are distinct from the recorded conversational A/B evaluation artifacts under `tests/`.
 
@@ -343,7 +397,7 @@ No API key or third-party Python package is required for the existing static val
 ```bash
 git clone https://github.com/imend35/careermatch-ai.git
 cd careermatch-ai
-```
+````
 
 ### Run Static Validation
 
