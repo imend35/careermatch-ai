@@ -2,94 +2,137 @@
 
 **Course:** Prompt Engineering 2.0 (Multimodal)  
 **Project:** CareerMatch AI  
+**Version:** 1.1  
 **Evaluation Date:** October 10, 2026
 
 ## 1. Is the task divided into clear steps?
 
 **Status: PASS**
 
-The workflow consists of four specialized stages:
+The workflow contains four specialized stages:
 
 1. Job Requirement Extraction
 2. Evidence-Based CV Matching
 3. Application Drafting
 4. Independent Claim Audit and Human Approval
 
-Each stage has a defined responsibility, input, output, and validation objective.
+Each stage has a defined purpose, inputs, outputs, and validation criteria.
 
 ## 2. Are at least two input types used?
 
-**Status: PARTIALLY DEMONSTRATED**
+**Status: PASS FOR SUPPLEMENTARY STAGE 2 DEMONSTRATION**
 
-The project uses textual job descriptions and candidate CVs, together with a structured CSV requirements table in the Baseline A evaluation.
+The project uses unstructured text and a structured CSV table.
 
-However, the current Chain B demonstration does not yet establish that the CSV was independently processed as a second input modality within the four-stage workflow.
+The supplementary Stage 2 execution processed:
 
-An additional demonstration should explicitly combine textual and tabular inputs and preserve their separate evidence references.
+- Synthetic candidate CV (Markdown text)
+- Requirements table (CSV)
+- Original job description (plain text)
+
+The recorded execution evaluated nine CSV requirements and produced evidence-based matching results.
+
+A separate deterministic validation also confirmed consistency between the CSV, original job description, and existing Stage 1 extraction.
+
+**Limitation:** The supplementary test establishes text-and-table processing at Stage 2. A complete new four-stage LLM run using both formats has not been recorded.
+
+**Evidence:**
+
+- `tests/multimodal/MULTIMODAL_TEST_REPORT.md`
+- `tests/multimodal/STAGE2_TEXT_CSV_OUTPUT.json`
+- `tests/multimodal/STAGE2_TEXT_CSV_TEST_REPORT.md`
 
 ## 3. Is every output supported by evidence?
 
-**Status: PASS — Within Recorded Validation Scope**
+**Status: PASS — WITHIN RECORDED VALIDATION SCOPE**
 
-Requirements are linked to original job advertisement quotations.
+Job requirements retain source quotations from the original fictional advertisement.
 
-Candidate matches and application claims are linked to synthetic CV evidence.
+Candidate matches reference exact quotations from the synthetic CV.
 
-The project distinguishes documented evidence, user-confirmed evidence, and unverifiable information.
+The workflow distinguishes `CV_DOCUMENTED`, `USER_CONFIRMED`, and `NOT_VERIFIABLE` information.
 
-Static validation and the recorded Stage 4 audit support internal traceability, without establishing external verification of fictional credentials.
+The recorded audit and validation support internal traceability, but do not constitute independent verification of candidate credentials.
 
 ## 4. Were results measured against predefined criteria?
 
 **Status: PARTIAL**
 
-The project compares Baseline A and Chain B using four evaluation criteria (K1–K4).
+The project documents K1–K4 evaluation criteria and records results for Baseline A and Chain B.
 
-Both approaches achieved 4/4 recorded output-level checks and 94.44% evidence alignment.
+Both original approaches achieved:
 
-However, Chain B criteria were mapped retrospectively to its artifacts, and the informational inputs were not perfectly equivalent.
+- 4/4 recorded output-level checks
+- 94.44% custom evidence alignment
 
-A future experiment should apply the same predefined criteria and equivalent inputs before execution.
+The supplementary text-and-CSV Stage 2 execution reported:
+
+- 9 evaluated requirements
+- 7 full matches
+- 2 partial matches
+- 88.89% custom evidence alignment
+
+The supplementary result was not a controlled comparison with the original Chain B run.
+
+The original A/B comparison also has limitations: some criteria were mapped retrospectively, input conditions were not perfectly equivalent, and execution time was not recorded.
+
+No accuracy, speed, or cost superiority is claimed.
 
 ## 5. Is there a human approval checkpoint?
 
 **Status: PASS**
 
-All generated application materials require human review.
+The independent auditor requires explicit human review before any external application action.
 
-The Stage 4 audit records `PENDING_HUMAN_APPROVAL`.
+The recorded approval status remains:
 
-No external application submission is implemented or authorized.
+`PENDING_HUMAN_APPROVAL`
 
-## 6. Were the three best prompts converted into reusable library cards?
+No external application was submitted.
 
-**Status: PENDING**
+## 6. Were three reusable prompt library cards created?
 
-Three reusable prompt library cards will be prepared with the required fields:
+**Status: PASS**
 
-- Name
-- Purpose
-- Bracketed variables
-- Prompt
-- Control criteria
+Three reusable cards are documented in:
 
-Each card will include a version and revision date.
+`docs/PROMPT_LIBRARY_CARDS.md`
+
+The cards cover:
+
+1. Evidence-Based Job Requirement Extractor
+2. Evidence-Based CV and Skills Matcher
+3. Independent Claim Auditor and Human Approval Gate
+
+Each card includes its name, purpose, bracketed variables, reusable prompt, validation criteria, version, and source reference.
 
 ## Summary
 
-| Criterion                  | Result                 |
-| -------------------------- | ---------------------- |
-| Task decomposition         | PASS                   |
-| Two input types            | PARTIALLY DEMONSTRATED |
-| Evidence traceability      | PASS                   |
-| Criteria-based evaluation  | PARTIAL                |
-| Human approval             | PASS                   |
-| Three prompt library cards | PENDING                |
+| Criterion | Status |
+|---|---|
+| Task decomposition | PASS |
+| Two input types | PASS — Supplementary Stage 2 |
+| Evidence traceability | PASS — Recorded scope |
+| Criteria-based evaluation | PARTIAL |
+| Human approval | PASS |
+| Three prompt library cards | PASS |
+
+## Remaining Limitations
+
+- The original A/B comparison is only partially controlled.
+- Only one supplementary text-and-CSV LLM execution is documented.
+- Model-reported checks do not replace independent verification.
+- A complete new four-stage text-and-table execution has not been recorded.
+- Execution latency and token costs were not measured.
+- The project uses synthetic public demonstration data.
+- The recurring weekly use case should be explicitly documented and evidenced.
 
 ## Conclusion
 
-CareerMatch AI demonstrates a functional four-stage prompt-chain design, evidence-based application drafting, internal validation, and human oversight.
+CareerMatch AI demonstrates a four-stage prompt-chain design, source-based matching, structured output validation, reusable prompt cards, and human approval safeguards.
 
-Before final course submission, the project should strengthen the explicit two-input-type demonstration, complete the three reusable prompt cards, and document the limitations of the partially controlled A/B comparison.
+The supplementary Stage 2 execution adds recorded evidence of text-and-table processing.
 
-The recorded results do not establish an accuracy or speed advantage for Chain B.
+The project meets five self-evaluation criteria within their stated scopes. The criteria-based comparison remains partial because the original A/B evaluation was not fully controlled.
+
+All alignment percentages are internal demonstration metrics, not official ATS scores or hiring probabilities.
