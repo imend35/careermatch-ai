@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private candidate data
+private_data/
+real_cv/
+*.docx
+*.pdf
+
+# Local files
+.DS_Store
+Thumbs.db
+.vscode/
