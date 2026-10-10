@@ -1,0 +1,126 @@
+{
+  "status": "OK",
+  "validation_status": "REVIEW",
+  "structural_validation": {
+    "passed": true,
+    "issues": []
+  },
+  "claim_audit": [
+    {
+      "claim_id": "CLM-001",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Education: BSc, Computer Science",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-002",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: Modeled as-is and to-be processes using BPMN",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-003",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: Used SQL queries to validate data flows and prepare operational reports.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-004",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: documented functional and non-functional requirements.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-005",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: wrote user stories, use cases, and acceptance criteria for two Scrum teams.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-006",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: Analyzed REST API and web-service integration scenarios",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-007",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: evaluated potential AI-assisted workflow improvements.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-008",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: Facilitated stakeholder meetings and communicated implementation trade-offs.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-009",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: Coordinated system integration testing and user acceptance testing, tracking defects through resolution.",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-010",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Summary: Senior Business Analyst with 10 years of fictional experience",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-011",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Summary: financial services, telecommunications, and cloud software",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-012",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Core Skills: Agile/Scrum, SDLC",
+      "issue": null
+    },
+    {
+      "claim_id": "CLM-013",
+      "classification": "CV_DOCUMENTED",
+      "verified": true,
+      "source_reference": "synthetic_candidate_cv.md / Professional Experience: including field mappings and error handling.",
+      "issue": null
+    }
+  ],
+  "quality_scores": {
+    "factual_accuracy": 5,
+    "evidence_traceability": 4,
+    "job_relevance": 5,
+    "ats_friendly_structure": 4,
+    "writing_quality": 4,
+    "human_approval_safety": 5,
+    "weighted_total_out_of_100": 91.0
+  },
+  "issues": [
+    "Manual QA review is still required; rubric values are illustrative, not independently audited."
+  ],
+  "recommended_corrections": [
+    "Review the synthetic letter and evidence coverage before publishing as a demonstrated example."
+  ],
+  "human_approval": {
+    "status": "PENDING",
+    "approved_version": null,
+    "checklist": [
+      "Verify all claims against synthetic source",
+      "Review drafts",
+      "Approve exact final version"
+    ]
+  },
+  "submission_authorized": false
+}

@@ -1,0 +1,28 @@
+SYNTHETIC DEMONSTRATION JOB POSTING — NOT A LIVE VACANCY
+
+Company: Example Enterprise Solutions (fictional)
+Job title: Senior Business Analyst
+Location: Istanbul, Türkiye
+Work model: Hybrid
+
+Requirements
+- University degree in a relevant field.
+- Experience in business analysis, process analysis, and process modeling.
+- Knowledge and hands-on experience in SQL and data analysis.
+- Proficiency in functional analysis, requirements analysis, and documentation.
+- Ability to prepare user stories, use cases, and flow diagrams.
+- Knowledge of software development lifecycle and Agile methodologies.
+- Experience in system integrations and integration scenarios.
+- Interest in artificial intelligence and current technology trends.
+- Strong analytical thinking, problem-solving, and communication skills.
+
+Responsibilities
+- Analyze current and target business processes and define functional and technical requirements.
+- Recommend product and process improvements, including responsible use of AI tools.
+- Prepare clear analysis and design documentation for development teams.
+- Support functional testing, coordinate UAT, and report results.
+- Perform SQL and data analysis to support business reporting.
+- Follow applicable privacy, information-security, workplace-safety, and quality requirements.
+- Monitor relevant AI tools and identify potential efficiency improvements.
+
+Disclaimer: This listing is fictional and was authored solely as a safe public demo fixture. It is not the text of a real company's job advertisement.

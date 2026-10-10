@@ -1,0 +1,176 @@
+{
+  "status": "OK",
+  "matching_matrix": [
+    {
+      "requirement_id": "REQ-001",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Education",
+          "exact_quote": "BSc, Computer Science",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-002",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "Modeled as-is and to-be processes using BPMN",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-003",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "Used SQL queries to validate data flows and prepare operational reports.",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-004",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "documented functional and non-functional requirements.",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-005",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "wrote user stories, use cases, and acceptance criteria for two Scrum teams.",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-006",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "MODERATE",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Core Skills",
+          "exact_quote": "Agile/Scrum, SDLC",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-007",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "STRONG",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "Analyzed REST API and web-service integration scenarios",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-008",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "MODERATE",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "evaluated potential AI-assisted workflow improvements.",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    },
+    {
+      "requirement_id": "REQ-009",
+      "cv_only_status": "MATCHED",
+      "confirmed_status": "MATCHED",
+      "evidence_strength": "MODERATE",
+      "evidence": [
+        {
+          "source_type": "CV_DOCUMENTED",
+          "source_section": "Professional Experience",
+          "exact_quote": "Facilitated stakeholder meetings and communicated implementation trade-offs.",
+          "user_confirmation_date": null
+        }
+      ],
+      "gap": "",
+      "suggested_revision": "",
+      "human_review_required": false
+    }
+  ],
+  "scoring": {
+    "scoring_rule": {
+      "MATCHED": 1,
+      "PARTIALLY_MATCHED": 0.5,
+      "NOT_VERIFIABLE": 0,
+      "NOT_MATCHED": 0
+    },
+    "requirement_count": 9,
+    "cv_only_alignment_percent": 100.0,
+    "confirmed_alignment_percent": 100.0,
+    "official_ats_score": null
+  },
+  "validation": {
+    "all_requirement_ids_present": true,
+    "warnings": [
+      "Illustrative synthetic case; 100% is a rubric alignment score, not an ATS score."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "candidate_id": "SYNTHETIC-001",
+  "synthetic": true,
+  "name": "Alex Morgan",
+  "headline": "Senior Business Analyst | Agile Delivery | Data Analytics",
+  "summary": "Fictional Senior Business Analyst with 10 years of experience across financial services, telecom and cloud software.",
+  "skills": [
+    "Business Analysis",
+    "Process Analysis",
+    "BPMN",
+    "Requirements Engineering",
+    "Functional Analysis",
+    "BRD/FRD",
+    "User Stories",
+    "Use Cases",
+    "SQL",
+    "Data Analysis",
+    "SDLC",
+    "Agile/Scrum",
+    "REST APIs",
+    "Web Services",
+    "System Integration Testing",
+    "UAT",
+    "Stakeholder Management",
+    "AI Workflow Prototyping"
+  ],
+  "experience": [
+    {
+      "employer": "Northstar Cloud Systems (fictional)",
+      "role": "Senior Business Analyst",
+      "dates": "2021-03 to 2025-12",
+      "evidence": [
+        "BPMN as-is/to-be process models",
+        "User stories, use cases, acceptance criteria",
+        "REST API and web service integration scenarios",
+        "System integration testing and UAT",
+        "SQL data validation and reporting",
+        "AI-assisted workflow evaluation"
+      ]
+    },
+    {
+      "employer": "Meridian Financial Solutions (fictional)",
+      "role": "Business Analyst",
+      "dates": "2017-07 to 2021-02",
+      "evidence": [
+        "Functional specifications and process diagrams",
+        "SQL data quality analysis",
+        "UAT planning",
+        "Stakeholder workshops"
+      ]
+    },
+    {
+      "employer": "Harbor Telecom Labs (fictional)",
+      "role": "Junior Business Analyst",
+      "dates": "2016-01 to 2017-06",
+      "evidence": [
+        "Requirements documentation",
+        "Use cases and regression testing"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc Computer Science",
+      "institution": "Westbridge University (fictional)",
+      "year": 2015
+    }
+  ],
+  "projects": [
+    "AI Workflow Prototype (fictional)",
+    "Business Intelligence Dashboard (fictional)"
+  ],
+  "usage_notice": "Fully synthetic public demo data; not a real candidate or employment record."
+}
